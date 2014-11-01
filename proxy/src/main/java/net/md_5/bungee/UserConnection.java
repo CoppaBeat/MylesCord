@@ -49,21 +49,13 @@ import net.md_5.bungee.protocol.Protocol;
 import net.md_5.bungee.protocol.ProtocolConstants;
 import net.md_5.bungee.protocol.packet.Chat;
 import net.md_5.bungee.protocol.packet.ClientSettings;
-<<<<<<< HEAD
 import net.md_5.bungee.protocol.packet.PlayerListHeaderFooter;
 import net.md_5.bungee.protocol.packet.PluginMessage;
-=======
->>>>>>> Upstream/master
 import net.md_5.bungee.protocol.packet.Kick;
-import net.md_5.bungee.protocol.packet.PlayerListHeaderFooter;
-import net.md_5.bungee.protocol.packet.PluginMessage;
 import net.md_5.bungee.protocol.packet.SetCompression;
-<<<<<<< HEAD
 import net.md_5.bungee.tab.*;
-=======
 import net.md_5.bungee.tab.ServerUnique;
 import net.md_5.bungee.tab.TabList;
->>>>>>> Upstream/master
 import net.md_5.bungee.util.CaseInsensitiveSet;
 
 @RequiredArgsConstructor
@@ -168,8 +160,7 @@ public final class UserConnection implements ProxiedPlayer
                 break;
         }*/
         tabListHandler = new CompatList( this );
-=======
-         {
+        /* {
          case "GLOBAL":
          tabListHandler = new Global( this );
          break;
@@ -180,8 +171,7 @@ public final class UserConnection implements ProxiedPlayer
          tabListHandler = new GlobalPing( this );
          break;
          }*/
-        tabListHandler = new ServerUnique( this );
->>>>>>> Upstream/master
+       // tabListHandler = new ServerUnique( this );
 
         Collection<String> g = bungee.getConfigurationAdapter().getGroups( name );
         for ( String s : g )
@@ -510,8 +500,6 @@ public final class UserConnection implements ProxiedPlayer
         return ( locale == null && settings != null ) ? locale = Locale.forLanguageTag( settings.getLocale().replaceAll( "_", "-" ) ) : locale;
     }
 
-<<<<<<< HEAD
-=======
     @Override
     public Map<String, String> getModList()
     {
@@ -525,7 +513,6 @@ public final class UserConnection implements ProxiedPlayer
         return ImmutableMap.copyOf( forgeClientHandler.getClientModList() );
     }
 
->>>>>>> Upstream/master
     private static final String EMPTY_TEXT = ComponentSerializer.toString( new TextComponent( "" ) );
 
     @Override

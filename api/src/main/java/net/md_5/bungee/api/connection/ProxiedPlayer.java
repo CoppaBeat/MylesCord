@@ -165,9 +165,6 @@ public interface ProxiedPlayer extends Connection, CommandSender
      * @see Title
      */
     void sendTitle(Title title);
-<<<<<<< HEAD
-=======
-
     /**
      * Gets this player's Forge Mod List, if the player has sent this
      * information during the lifetime of their connection to Bungee. There is
@@ -191,5 +188,4 @@ public interface ProxiedPlayer extends Connection, CommandSender
      * not occurred for this {@link ProxiedPlayer} yet.
      */
     Map<String, String> getModList();
->>>>>>> Upstream/master
 }
